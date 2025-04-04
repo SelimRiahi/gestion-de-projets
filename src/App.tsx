@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, CssBaseline, Typography } from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <CssBaseline />
+      <Box sx={{ display: "flex", minHeight: "100vh" }}>
+        {/* Sidebar */}
+        <Box
+          sx={{
+            width: 250,
+            bgcolor: "background.paper",
+            borderRight: "1px solid #eee",
+            p: 2,
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Typography variant="h6">Projects</Typography>
+        </Box>
+
+        {/* Main Content */}
+        <Box sx={{ flexGrow: 1, p: 3 }}>
+          <Typography variant="h4">Select a project</Typography>
+        </Box>
+      </Box>
+    </>
   );
 }
 
